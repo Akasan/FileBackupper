@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace FileBuckupper
 {
-    public partial class Form1 : Form
+    public partial class NewTrackingForm : Form
     {
-        public Form1()
+        public NewTrackingForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-
         }
 
-        private void 終了XToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NewTrackingForm_Load(object sender, EventArgs e)
         {
-            Close();
-        }
 
-        private void 新規NToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NewTrackingForm newTrackingForm = new NewTrackingForm();
-            newTrackingForm.ShowDialog();
         }
     }
 }

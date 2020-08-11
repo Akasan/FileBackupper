@@ -157,6 +157,7 @@
             this.新規NToolStripMenuItem.Name = "新規NToolStripMenuItem";
             this.新規NToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.新規NToolStripMenuItem.Text = "新規(&N)";
+            this.新規NToolStripMenuItem.Click += new System.EventHandler(this.新規NToolStripMenuItem_Click);
             // 
             // ヘルプHToolStripMenuItem
             // 
