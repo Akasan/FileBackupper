@@ -12,6 +12,8 @@ namespace FileBuckupper
 {
     public partial class MainForm : Form
     {
+        private NewTrackingForm newTrackingForm;
+
         public MainForm()
         {
             InitializeComponent();
@@ -26,8 +28,35 @@ namespace FileBuckupper
 
         private void 新規NToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewTrackingForm newTrackingForm = new NewTrackingForm();
+            newTrackingForm = new NewTrackingForm();
             newTrackingForm.ShowDialog();
+            UpdateTargetFileListView();
+            UpdateTargetFolderListView();
+        }
+
+        private void UpdateTargetFileListView() {
+            targetFileListView.FullRowSelect = true;
+            targetFileListView.GridLines = true;
+            targetFileListView.Sorting = SortOrder.Ascending;
+            targetFileListView.View = View.Details;
+
+            foreach (string filePath in newTrackingForm.FilePaths)
+            {
+                targetFileListView.Items.Add(filePath);
+            }
+        }
+
+        private void UpdateTargetFolderListView()
+        {
+            targetFolderListView.FullRowSelect = true;
+            targetFolderListView.GridLines = true;
+            targetFolderListView.Sorting = SortOrder.Ascending;
+            targetFolderListView.View = View.Details;
+
+            foreach (string folderPath in newTrackingForm.FolderPaths)
+            {
+                targetFolderListView.Items.Add(folderPath);
+            }
         }
     }
 }
