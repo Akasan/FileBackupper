@@ -19,7 +19,7 @@ namespace FileBuckupper
 
             // 起動前にGitのインストールを確認する機能を追加
             // インストールがされていない場合は、インストーラーを利用させる
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }

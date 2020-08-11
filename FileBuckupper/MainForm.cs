@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FileBuckupper
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
